@@ -49,6 +49,7 @@
 		0E0CAAA41FD0A6FD008EC2DD /* SoftwareProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareProjectUITests.swift; sourceTree = "<group>"; };
 		0E0CAAA61FD0A6FD008EC2DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E0CAAEC1FD2C90F008EC2DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0ECA533C1FD4942500E39B3C /* SoftPro.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = SoftPro.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +103,7 @@
 				0E0CAA841FD0A6FD008EC2DD /* AppDelegate.swift */,
 				0E0CAA861FD0A6FD008EC2DD /* ViewController.swift */,
 				0E0CAA881FD0A6FD008EC2DD /* Main.storyboard */,
+				0ECA533C1FD4942500E39B3C /* SoftPro.py */,
 				0E0CAAEC1FD2C90F008EC2DD /* LoginViewController.swift */,
 				0E0CAA8B1FD0A6FD008EC2DD /* Assets.xcassets */,
 				0E0CAA8D1FD0A6FD008EC2DD /* LaunchScreen.storyboard */,
