@@ -37,6 +37,9 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="titleShadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="RegisterBTN:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g3U-yP-tZ5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oq5-1H-5X9">
                                 <rect key="frame" x="43" y="352" width="329" height="64"/>
@@ -57,10 +60,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6Yl-bJ-PBu"/>
                     <connections>
+                        <outlet property="RegisterBTN" destination="bDz-pb-7xb" id="KrM-zX-afd"/>
                         <outlet property="loginBTN" destination="oq5-1H-5X9" id="2VA-SI-vCo"/>
                         <outlet property="registerBTN" destination="bDz-pb-7xb" id="Dgz-Ti-lOV"/>
                         <segue destination="oi3-9g-pfc" kind="show" identifier="toLoginPage" id="sl3-54-N1k"/>
-                        <segue destination="ZR1-vH-9Ef" kind="show" identifier="toRegisterPage" id="Twc-Lb-Vne"/>
+                        <segue destination="0z0-Yw-IKC" kind="show" identifier="toRegisterPage" id="Twc-Lb-Vne"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,8 +79,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bud-jr-rt8">
+                                <rect key="frame" x="162" y="76" width="90" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgf-j6-3Wh">
-                                <rect key="frame" x="329" y="43" width="39" height="21"/>
+                                <rect key="frame" x="331" y="83" width="39" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.6705882353" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <rect key="contentStretch" x="0.40000000000000002" y="0.0" width="1" height="1"/>
@@ -99,21 +110,53 @@
                                 <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" red="0.0" green="0.6705882353" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bud-jr-rt8">
-                                <rect key="frame" x="152" y="42" width="90" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jFN-QD-rAP" userLabel="HBHome">
+                                <rect key="frame" x="0.0" y="76" width="87" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" red="0.043137254899999998" green="0.14117647059999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yNY-Qm-eVX" userLabel="HBContacts">
+                                <rect key="frame" x="0.0" y="136" width="87" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Contacts">
+                                    <color key="titleColor" red="0.043137254899999998" green="0.14117647059999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5A-qY-bvs" userLabel="HBEmergency">
+                                <rect key="frame" x="0.0" y="196" width="87" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Emergency">
+                                    <color key="titleColor" red="0.043137254899999998" green="0.14117647059999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKJ-bM-2lD" userLabel="HBSettings">
+                                <rect key="frame" x="0.0" y="256" width="87" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.043137254899999998" green="0.14117647059999999" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="EDl-uq-flT"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Xaf-vm-OIJ">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="hMenu" id="kK3-Rw-Bft">
+                            <color key="tintColor" red="0.0" green="0.6705882353" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ikq-oz-h6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3752" y="274"/>
+            <point key="canvasLocation" x="4365.217391304348" y="273.91304347826087"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="fki-Di-Y6o">
@@ -174,10 +217,6 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="LoginPgBTN:" destination="y6c-EI-YeO" eventType="touchUpInside" id="6tS-9E-mM6"/>
-                                    <action selector="loginPG:" destination="y6c-EI-YeO" eventType="touchUpInside" id="oHt-8Y-Vd5"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5yi-23-6E3" userLabel="ForgotBTN">
                                 <rect key="frame" x="45" y="467" width="212" height="30"/>
@@ -198,11 +237,10 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="zdk-Z2-8fi" kind="show" identifier="toHomePage" id="SmV-a6-EbA"/>
+                        <segue destination="4eT-rQ-o6E" kind="show" identifier="toHomePage" id="SmV-a6-EbA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RW3-VS-Qv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="y6c-EI-YeO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1963.7681159420292" y="32.608695652173914"/>
         </scene>
@@ -320,30 +358,72 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="RegisterPgBTN:" destination="6WO-Dx-T8q" eventType="touchUpInside" id="Cl3-Wa-rGs"/>
+                                    <action selector="RegisterPgBTN:" destination="6WO-Dx-T8q" eventType="touchUpInside" id="wrT-Si-O91"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mdh-3a-G8E"/>
                     </view>
-                    <navigationItem key="navigationItem" id="6by-WX-nAM"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6by-WX-nAM">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="hMenu" id="fkz-D9-imf">
+                            <color key="tintColor" red="0.0" green="0.6705882353" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="zdk-Z2-8fi" kind="show" identifier="regToHome" id="psW-bO-ilp"/>
+                        <segue destination="4eT-rQ-o6E" kind="show" identifier="regToHome" id="psW-bO-ilp"/>
                         <segue destination="XpZ-rH-hMu" kind="show" identifier="regToLogin" id="5XN-LW-rcQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aQ-ic-H5Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="6WO-Dx-T8q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1963.7681159420292" y="764.67391304347836"/>
+            <point key="canvasLocation" x="2271.0144927536235" y="764.67391304347836"/>
+        </scene>
+        <!--Register Navigation Controller-->
+        <scene sceneID="oEP-mb-tpt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0z0-Yw-IKC" userLabel="Register Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PcR-jM-ic3">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZR1-vH-9Ef" kind="relationship" relationship="rootViewController" id="x3E-TF-2fd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0s1-vv-gmY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1535" y="765"/>
+        </scene>
+        <!--Home Navigation Controller-->
+        <scene sceneID="G8x-MS-Vbk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4eT-rQ-o6E" userLabel="Home Navigation Controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vXZ-CH-t0A">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zdk-Z2-8fi" kind="relationship" relationship="rootViewController" id="gcM-LL-KdY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6t-gE-NAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3690" y="274"/>
         </scene>
     </scenes>
     <resources>
         <image name="hMenu" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5XN-LW-rcQ"/>
         <segue reference="psW-bO-ilp"/>
+        <segue reference="5XN-LW-rcQ"/>
     </inferredMetricsTieBreakers>
 </document>
