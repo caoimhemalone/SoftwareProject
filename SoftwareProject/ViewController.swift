@@ -16,11 +16,10 @@ class ViewController: UIViewController {
  
     @IBOutlet weak var RegisterAlreadyBTN: UIButton!
     
-    @IBAction func RegisterPgBTN(_ sender: UIButton) {
-    }
-    
     @IBOutlet weak var loginBTN: UIButton!
      @IBOutlet weak var RegisterBTN: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         onLBL?.layer.cornerRadius = 5
@@ -47,6 +46,20 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "toRegisterPage", sender: self)
     }
     
+    @IBAction func addNewCon(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAddContact", sender: self)
+    }
     
+    @IBAction func hamHome(_ sender: UIButton) {
+        performSegue(withIdentifier: "hamToHome", sender: self)
+    }
+    
+    @IBAction func hamContact(_ sender: UIButton) {
+        performSegue(withIdentifier: "toContacts", sender: self)
+    }
+    
+    @IBAction func hamEmerg(_ sender: UIButton) {
+        performSegue(withIdentifier: "toEmerg", sender: self)
+    }
 }
 
