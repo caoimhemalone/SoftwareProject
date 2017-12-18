@@ -9,6 +9,8 @@
 import grovepi
 from grovepi import *
 import math
+import random
+from grove_rgb_lcd import *
 
 ultrasonic_ranger = 4
 buzzer = 6
@@ -20,8 +22,10 @@ while True:
         grovepi.pinMode(switch, "INPUT")
         while True:
             if grovepi.digitalRead(switch) == 1: #if the system is on
-                if grovepi.ultrasonicRead(ultrasonic_ranger) < 100: #if motion is detected
-                    print("Disturbance")
+                setRGB(0,255,0)
+                    setText("System On")
+                    if grovepi.ultrasonicRead(ultrasonic_ranger) < 100: #if motion is detected
+                        print("Disturbance")
                         grovepi.analogWrite(buzzer, 100) #buzzer makes noise
                         time.sleep(.5)
                             grovepi.analogWrite(buzzer, 0) #turn buzzer off
@@ -29,10 +33,9 @@ while True:
                     
                         else : #if the system is off
                             grovepi.digitalWrite(led_status, 0) # turn led off
+                            setRGB(255,0,0)
+                            setText("System Off")
 
 
     except IOError:
         print ("Error")
-
-
-
