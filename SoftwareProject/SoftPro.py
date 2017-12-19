@@ -27,9 +27,10 @@ while True:
                     if grovepi.ultrasonicRead(ultrasonic_ranger) < 100: #if motion is detected
                         print("Disturbance")
                         grovepi.analogWrite(buzzer, 100) #buzzer makes noise
-                        time.sleep(.5)
+                        grovepi.digitalWrite(led_status, 1) #turn on led to indicate movement
+                        time.sleep(.2)
                             grovepi.analogWrite(buzzer, 0) #turn buzzer off
-                            grovepi.digitalWrite(led_status, 1) #turn on led to indicate movement
+                            grovepi.digitalWrite(led_status, 0) #turn off led
                     
                         else : #if the system is off
                             grovepi.digitalWrite(led_status, 0) # turn led off
