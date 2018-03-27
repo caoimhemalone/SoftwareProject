@@ -15,7 +15,7 @@ public class Settings extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.settings_content);
 
         HButton = (Button) findViewById(R.id.HomeButton);
         HButton.setOnClickListener(new View.OnClickListener() {
