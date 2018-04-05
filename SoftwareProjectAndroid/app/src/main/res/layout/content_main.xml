@@ -74,13 +74,21 @@
                 android:textAlignment="center"/>
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/activeBTN"
                 android:layout_width="match_parent"
-                android:layout_height="112dp"
+                android:layout_height="282dp"
                 android:layout_marginTop="50dp"
-                app:srcCompat="@mipmap/ic_launcher_round"
+                app:srcCompat="@drawable/greenbtn"
                 tools:layout_editor_absoluteX="138dp"
                 tools:layout_editor_absoluteY="203dp" />
+            <!--<ImageView-->
+                <!--android:id="@+id/notActiveBTN"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="282dp"-->
+                <!--android:layout_marginTop="50dp"-->
+                <!--app:srcCompat="@drawable/redbtn"-->
+                <!--tools:layout_editor_absoluteX="138dp"-->
+                <!--tools:layout_editor_absoluteY="203dp" />-->
         </LinearLayout>
 
     </RelativeLayout>
