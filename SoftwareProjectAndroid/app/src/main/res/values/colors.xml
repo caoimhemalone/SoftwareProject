@@ -4,5 +4,9 @@
     <color name="colorPrimaryDark">#EFFA25</color>
     <color name="colorAccent">#B7DFED</color>
     <color name="topBarColor">#ffff</color>
+    <color name="white">#fff</color>
+    <color name="yellow">#EBF25A</color>
+    <color name="blue">#0082e4</color>
+    <color name="amazon">#154f7e</color>
 
 </resources>
