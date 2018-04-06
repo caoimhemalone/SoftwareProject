@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
+
 /**
  * Created by caoimhemalone on 26/03/2018.
  */
@@ -19,6 +20,8 @@ public class Contacts extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contacts_content);
+
+        //For top bar buttons
 
         HButton = (Button) findViewById(R.id.HomeButton);
         HButton.setOnClickListener(new View.OnClickListener() {
@@ -63,6 +66,8 @@ public class Contacts extends AppCompatActivity {
                 finish();
             }
         });
+
+
 
     }
 
