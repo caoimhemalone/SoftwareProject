@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.example.caoimhemalone.softwareproject.Emergency">
 
     <include
@@ -11,5 +11,103 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp">
+
+    <LinearLayout
+        android:id="@+id/TopLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Username"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.032"
+            android:textAlignment="center"
+            android:layout_marginLeft="110dp"
+            android:fontFamily="@font/menloregular"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Logo"
+            tools:layout_editor_absoluteX="284dp"
+            tools:layout_editor_absoluteY="16dp"
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="80dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/emergency"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:fontFamily="@font/menloregular"
+                android:layout_marginBottom="25dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/red"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/nineoneone"
+                android:textColor="@color/white"
+                android:fontFamily="@font/robotoblack"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:id="@+id/nineoneone"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/yellow"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/callCont"
+                android:textColor="@color/white"
+                android:fontFamily="@font/robotoblack"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:id="@+id/callContacts"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/blue"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:text="@string/camAccess"
+                android:textColor="@color/white"
+                android:fontFamily="@font/robotoblack"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:id="@+id/camAccess"/>
+
+        </LinearLayout>
+    </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

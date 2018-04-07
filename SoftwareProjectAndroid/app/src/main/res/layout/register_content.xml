@@ -1,6 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#000"
+        >
+
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="50dp"
+            android:textColor="#fff"
+            android:fontFamily="@font/sofiaregular"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            />
+
+        <TextView
+            android:id="@+id/addUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/addUser"
+            android:layout_marginStart="160dp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/robotoblack"
+            android:textAlignment="center"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/nameLayout">
+
+            <TextView
+                android:id="@+id/auNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ralewaylight"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/auNameET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/white"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/numberLayout">
+
+            <TextView
+                android:id="@+id/auNumTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/number"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ralewaylight"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/auNumET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:inputType="text|number"
+                android:backgroundTint="@color/white"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/emailLayout">
+
+            <TextView
+                android:id="@+id/auEmailTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/email"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ralewaylight"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/auEmailET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:backgroundTint="@color/white"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/passwordLayout">
+
+            <TextView
+                android:id="@+id/auPwordTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/password"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ralewaylight"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/auPwordET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:backgroundTint="@color/white"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/ConpasswordLayout">
+
+            <TextView
+                android:id="@+id/auConPwordTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/conPword"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ralewaylight"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/auConPwordET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:backgroundTint="@color/white"
+                />
+
+
+        </LinearLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/addUserBTN"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/yellow"
+            android:clickable="true"
+            app:srcCompat="@android:drawable/ic_menu_add"
+            android:background="@color/yellow"
+            android:layout_marginStart="290dp"
+            android:layout_marginTop="40dp"/>
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

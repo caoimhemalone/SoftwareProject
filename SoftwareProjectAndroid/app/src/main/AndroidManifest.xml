@@ -31,12 +31,16 @@
             android:name=".Settings"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
-        <!--<activity-->
-            <!--android:name=".Login"-->
-            <!--android:theme="@style/AppTheme.NoActionBar">-->
-        <!--</activity>-->
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
         <activity
             android:name=".Register"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
+            android:name=".Login2"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>

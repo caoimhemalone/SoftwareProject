@@ -13,13 +13,22 @@
         android:contentDescription="@string/womanDesc"
         app:srcCompat="@drawable/loginbckrndedited" />
 
+
+
+        <Button
+            android:id="@+id/homeLogBTN"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Home" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
 
-    <TextView
+        <TextView
         android:id="@+id/appName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,7 +45,6 @@
         android:id="@+id/slogan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/appName"
         android:text="@string/slogan"
         android:layout_marginStart="120dp"
         android:textColor="@color/white"

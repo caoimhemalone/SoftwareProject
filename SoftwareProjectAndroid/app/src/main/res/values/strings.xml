@@ -18,4 +18,12 @@
     <string name="signup"> Sign Up</string>
     <string name="loginAM"> Login with Amazon</string>
     <string name="login">Login</string>
+    <string name="addUser">Add User</string>
+    <string name="password">Password</string>
+    <string name="conPword">Confirm Password</string>
+
+    <string name="emergency">Emergency</string>
+    <string name="nineoneone"> Call 911</string>
+    <string name="callCont">Alert Contacts</string>
+    <string name="camAccess">Camera Access</string>
 </resources>

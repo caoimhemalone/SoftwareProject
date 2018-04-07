@@ -39,7 +39,8 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.032"
                 android:textAlignment="center"
-                android:layout_marginLeft="110dp"/>
+                android:layout_marginLeft="110dp"
+                android:fontFamily="@font/menloregular"/>
 
             <TextView
                 android:id="@+id/textView2"
