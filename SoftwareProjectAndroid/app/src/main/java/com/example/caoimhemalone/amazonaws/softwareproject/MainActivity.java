@@ -43,7 +43,6 @@ import java.io.UnsupportedEncodingException;
 import java.security.KeyStore;
 import java.util.UUID;
 
-import com.example.caoimhemalone.softwareproject.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -412,7 +411,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
 
-}
+
 
     @Override
     public void onBackPressed() {
