@@ -302,6 +302,15 @@ public class MainActivity extends AppCompatActivity {
                 }
             }).start();
         }
+
+        //AWS Mobile
+        AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
+            @Override
+            public void onComplete(AWSStartupResult awsStartupResult) {
+                Log.d("MainActivity", "AWSMobileClient is instantiated and you are connected to AWS!");
+            }
+        }).execute();
+
     }
 
     View.OnClickListener connectClick = new View.OnClickListener() {
