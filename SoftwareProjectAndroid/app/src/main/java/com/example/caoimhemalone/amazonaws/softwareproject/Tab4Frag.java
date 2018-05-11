@@ -11,8 +11,11 @@ import android.view.ViewGroup;
 
 public class Tab4Frag extends Fragment {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Declare a DynamoDBMapper object
 //    DynamoDBMapper dynamoDBMapper;
+=======
+>>>>>>> parent of 7ed55db... mobile hub stuff added
 =======
 >>>>>>> parent of 7ed55db... mobile hub stuff added
 
@@ -20,6 +23,7 @@ public class Tab4Frag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 //        return super.onCreateView(inflater, container, savedInstanceState);
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         //For database
@@ -38,6 +42,8 @@ public class Tab4Frag extends Fragment {
 //        Thread mythread = new Thread(runnable);
 //        mythread.start();
 
+=======
+>>>>>>> parent of 7ed55db... mobile hub stuff added
 =======
 >>>>>>> parent of 7ed55db... mobile hub stuff added
         View view = inflater.inflate(R.layout.fragment_tab_4, container, false);

@@ -303,6 +303,7 @@ public class MainActivity extends AppCompatActivity {
             }).start();
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         //AWS Mobile
 //        AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
@@ -312,6 +313,8 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        }).execute();
 
+=======
+>>>>>>> parent of 7ed55db... mobile hub stuff added
 =======
 >>>>>>> parent of 7ed55db... mobile hub stuff added
     }

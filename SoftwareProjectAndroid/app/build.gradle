@@ -50,7 +50,10 @@ dependencies {
     implementation ('com.amazonaws:aws-android-sdk-mobile-client:2.6.+@aar') { transitive = true; }
     implementation 'com.google.firebase:firebase-core:12.0.1'
 <<<<<<< HEAD
+<<<<<<< HEAD
 //    implementation 'com.amazonaws:aws-android-sdk-ddb-mapper:2.6.+'
+=======
+>>>>>>> parent of 7ed55db... mobile hub stuff added
 =======
 >>>>>>> parent of 7ed55db... mobile hub stuff added
 }
