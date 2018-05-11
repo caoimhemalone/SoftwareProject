@@ -67,7 +67,7 @@
                 android:id="@+id/emailLayout">
 
                 <TextView
-                    android:id="@+id/auEmailTV"
+                    android:id="@+id/logEmailTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/email"
@@ -77,7 +77,7 @@
                     android:textStyle="bold"/>
 
                 <EditText
-                    android:id="@+id/auEmailET"
+                    android:id="@+id/logEmailET"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -93,7 +93,7 @@
                 android:id="@+id/passwordLayout">
 
                 <TextView
-                    android:id="@+id/auPwordTV"
+                    android:id="@+id/logPwordTV"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/password"
@@ -103,7 +103,7 @@
                     android:textStyle="bold"/>
 
                 <EditText
-                    android:id="@+id/auPwordET"
+                    android:id="@+id/logPwordET"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -124,6 +124,7 @@
                 android:layout_marginTop="40dp"
                 android:fontFamily="@font/ralewaylight"
                 android:textStyle="bold"
+                android:onClick="LoginBtnClick"
                 />
         </LinearLayout>
     </LinearLayout>

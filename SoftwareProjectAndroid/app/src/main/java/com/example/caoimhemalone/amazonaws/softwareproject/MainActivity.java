@@ -98,10 +98,17 @@ public class MainActivity extends AppCompatActivity {
 
     CognitoCachingCredentialsProvider credentialsProvider;
 
+    //For firebase
+    private TextView uNametv;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.content_main);
+
+        //For Firebase
+        uNametv = (TextView) findViewById(R.id.userTop);
+        uNametv.setText(getIntent().getExtras().getString("Email"));
 
         AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
             @Override
