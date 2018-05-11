@@ -13,7 +13,7 @@ import android.widget.Button;
  */
 
 public class Settings extends AppCompatActivity {
-    private Button HButton,CButton, EButton, SButton;
+    private Button HButton,CButton, EButton, SButton, guidelines;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +58,17 @@ public class Settings extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i;
                 i = new Intent(getApplicationContext(), Settings.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        guidelines = (Button) findViewById(R.id.guidlinesBTN);
+        guidelines.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i;
+                i = new Intent(getApplicationContext(), Guidelines.class);
                 startActivity(i);
                 finish();
             }
