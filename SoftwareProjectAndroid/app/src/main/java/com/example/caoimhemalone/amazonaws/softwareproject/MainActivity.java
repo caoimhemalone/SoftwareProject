@@ -306,12 +306,12 @@ public class MainActivity extends AppCompatActivity {
 <<<<<<< HEAD
 
         //AWS Mobile
-//        AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
-//            @Override
-//            public void onComplete(AWSStartupResult awsStartupResult) {
-//                Log.d("MainActivity", "AWSMobileClient is instantiated and you are connected to AWS!");
-//            }
-//        }).execute();
+        AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
+            @Override
+            public void onComplete(AWSStartupResult awsStartupResult) {
+                Log.d("MainActivity", "AWSMobileClient is instantiated and you are connected to AWS!");
+            }
+        }).execute();
 
 =======
 >>>>>>> parent of 7ed55db... mobile hub stuff added

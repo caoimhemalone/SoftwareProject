@@ -13,7 +13,7 @@ public class Tab2Frag extends Fragment {
 <<<<<<< HEAD
 <<<<<<< HEAD
     // Declare a DynamoDBMapper object
-//    DynamoDBMapper dynamoDBMapper;
+    DynamoDBMapper dynamoDBMapper;
 
 =======
 >>>>>>> parent of 7ed55db... mobile hub stuff added
@@ -28,11 +28,11 @@ public class Tab2Frag extends Fragment {
 
         //For database
         // Instantiate a AmazonDynamoDBMapperClient
-//        AmazonDynamoDBClient dynamoDBClient = new AmazonDynamoDBClient(AWSMobileClient.getInstance().getCredentialsProvider());
-//        this.dynamoDBMapper = DynamoDBMapper.builder()
-//                .dynamoDBClient(dynamoDBClient)
-//                .awsConfiguration(AWSMobileClient.getInstance().getConfiguration())
-//                .build();
+        AmazonDynamoDBClient dynamoDBClient = new AmazonDynamoDBClient(AWSMobileClient.getInstance().getCredentialsProvider());
+        this.dynamoDBMapper = DynamoDBMapper.builder()
+                .dynamoDBClient(dynamoDBClient)
+                .awsConfiguration(AWSMobileClient.getInstance().getConfiguration())
+                .build();
 
 =======
 >>>>>>> parent of 7ed55db... mobile hub stuff added
