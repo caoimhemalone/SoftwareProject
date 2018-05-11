@@ -32,7 +32,7 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.register_content);
         txtEmailReg = findViewById(R.id.auEmailET);
         txtPasswordReg = findViewById(R.id.auPwordET);
-        txtConfirmPasswordReg = findViewById(R.id.auConPwordET);
+        //txtConfirmPasswordReg = findViewById(R.id.auConPwordET);
         txtNumberReg = findViewById(R.id.auNumET);
         txtNameReg = findViewById(R.id.auNameET);
         firebaseAuth = FirebaseAuth.getInstance();
