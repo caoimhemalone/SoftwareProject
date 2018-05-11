@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.caoimhemalone.softwareproject.R;
+
 
 public class Register extends AppCompatActivity {
     private FloatingActionButton addBTN;

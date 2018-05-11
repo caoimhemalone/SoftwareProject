@@ -21,7 +21,7 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
-import com.example.caoimhemalone.softwareproject.R;
+
 
 
 /**
