@@ -7,19 +7,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.amazonaws.mobile.client.AWSMobileClient;
-import com.amazonaws.mobileconnectors.dynamodbv2.dynamodbmapper.DynamoDBMapper;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClient;
 
 
 public class Tab3Frag extends Fragment {
+<<<<<<< HEAD
     // Declare a DynamoDBMapper object
 //    DynamoDBMapper dynamoDBMapper;
+=======
+>>>>>>> parent of 7ed55db... mobile hub stuff added
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 //        return super.onCreateView(inflater, container, savedInstanceState);
+<<<<<<< HEAD
         //For database
         // Instantiate a AmazonDynamoDBMapperClient
 //        AmazonDynamoDBClient dynamoDBClient = new AmazonDynamoDBClient(AWSMobileClient.getInstance().getCredentialsProvider());
@@ -28,6 +29,8 @@ public class Tab3Frag extends Fragment {
 //                .awsConfiguration(AWSMobileClient.getInstance().getConfiguration())
 //                .build();
 
+=======
+>>>>>>> parent of 7ed55db... mobile hub stuff added
         View view = inflater.inflate(R.layout.fragment_tab_3, container, false);
         return view;
     }
