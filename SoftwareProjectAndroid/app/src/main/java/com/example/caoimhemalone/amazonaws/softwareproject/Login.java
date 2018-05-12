@@ -15,16 +15,16 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_content);
 
-        HBTN = (Button) findViewById(R.id.homeLogBTN);
-        HBTN.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i;
-                i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
+//        HBTN = (Button) findViewById(R.id.homeLogBTN);
+//        HBTN.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i;
+//                i = new Intent(getApplicationContext(), MainActivity.class);
+//                startActivity(i);
+//                finish();
+//            }
+//        });
 
 
         LogBTN = (Button) findViewById(R.id.Login);
@@ -38,16 +38,16 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        LogAma = (Button) findViewById(R.id.LoginAM);
-        LogAma.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i;
-                i = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(i);
-                finish();
-            }
-        });
+//        LogAma = (Button) findViewById(R.id.LoginAM);
+//        LogAma.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i;
+//                i = new Intent(getApplicationContext(), MainActivity.class);
+//                startActivity(i);
+//                finish();
+//            }
+//        });
 
         RegBTN = (Button) findViewById(R.id.SignUp);
        RegBTN.setOnClickListener(new View.OnClickListener() {

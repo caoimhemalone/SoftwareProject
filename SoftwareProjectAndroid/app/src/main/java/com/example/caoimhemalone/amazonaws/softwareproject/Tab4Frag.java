@@ -11,11 +11,24 @@ import android.view.ViewGroup;
 
 public class Tab4Frag extends Fragment {
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 //        return super.onCreateView(inflater, container, savedInstanceState);
-        View view = inflater.inflate(R.layout.fragment_tab_4, container, false);
+
+        //For database
+
+
+//        Runnable runnable = new Runnable() {
+//            public void run() {
+//                //DynamoDB calls go here
+//            }
+//        };
+//        Thread mythread = new Thread(runnable);
+//        mythread.start();
+
+View view = inflater.inflate(R.layout.fragment_tab_4, container, false);
         return view;
     }
 }

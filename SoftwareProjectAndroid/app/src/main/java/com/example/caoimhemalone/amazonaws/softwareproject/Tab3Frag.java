@@ -11,10 +11,13 @@ import android.view.ViewGroup;
 
 public class Tab3Frag extends Fragment {
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
 //        return super.onCreateView(inflater, container, savedInstanceState);
+
+        //For database
         View view = inflater.inflate(R.layout.fragment_tab_3, container, false);
         return view;
     }
