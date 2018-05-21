@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Login2 extends AppCompatActivity {
-    private Button HBTN,  LogBTN;
+    private Button HBTN;
+    private Button LogBtn;
 
     private EditText txtEmailLogin;
     private EditText txtPasswordLogin;
@@ -56,30 +58,58 @@ public class Login2 extends AppCompatActivity {
 //                finish();
 //            }
 //        });
+
+        LogBtn =  findViewById(R.id.Login2);
+        LogBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final ProgressDialog progressDialog = ProgressDialog.show(Login2.this, "Please Wait...", "Processing", true);
+
+                (firebaseAuth.signInWithEmailAndPassword(txtEmailLogin.getText().toString(), txtPasswordLogin.getText().toString()))
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                progressDialog.dismiss();
+
+                                if (task.isSuccessful()){
+                                    Toast.makeText(Login2.this, "Login Successful", Toast.LENGTH_LONG).show();
+                                    Intent i = new Intent(Login2.this, MainActivity.class);
+                                    i.putExtra("Email", firebaseAuth.getCurrentUser().getEmail());
+                                    startActivity(i);
+
+                                }
+                                else {
+                                    Log.e("Error",task.getException().toString());
+                                    Toast.makeText(Login2.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        });
+            }
+        });
     }
 
-    public void LoginBtnClick(View v){
-        final ProgressDialog progressDialog = ProgressDialog.show(Login2.this, "Please Wait...", "Processing", true);
-
-        (firebaseAuth.signInWithEmailAndPassword(txtEmailLogin.getText().toString(), txtPasswordLogin.getText().toString()))
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
-
-                        if (task.isSuccessful()){
-                            Toast.makeText(Login2.this, "Login Successful", Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(Login2.this, MainActivity.class);
-                            i.putExtra("Email", firebaseAuth.getCurrentUser().getEmail());
-                            startActivity(i);
-
-                        }
-                        else {
-                            Log.e("Error",task.getException().toString());
-                            Toast.makeText(Login2.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
-                        }
-                    }
-                });
-
-    }
+//    public void LoginBtnClick(View v){
+//        final ProgressDialog progressDialog = ProgressDialog.show(Login2.this, "Please Wait...", "Processing", true);
+//
+//        (firebaseAuth.signInWithEmailAndPassword(txtEmailLogin.getText().toString(), txtPasswordLogin.getText().toString()))
+//                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        progressDialog.dismiss();
+//
+//                        if (task.isSuccessful()){
+//                            Toast.makeText(Login2.this, "Login Successful", Toast.LENGTH_LONG).show();
+//                            Intent i = new Intent(Login2.this, MainActivity.class);
+//                            i.putExtra("Email", firebaseAuth.getCurrentUser().getEmail());
+//                            startActivity(i);
+//
+//                        }
+//                        else {
+//                            Log.e("Error",task.getException().toString());
+//                            Toast.makeText(Login2.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+//                        }
+//                    }
+//                });
+//
+//    }
 }

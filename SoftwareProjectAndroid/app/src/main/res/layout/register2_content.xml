@@ -40,32 +40,96 @@
             />
 
 
-
-            //Email
+        //Name
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:id="@+id/emailLayout">
+            android:id="@+id/nameLayout">
 
             <TextView
-                android:id="@+id/auEmailTV"
+                android:id="@+id/auNameTV"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/email"
+                android:text="@string/name"
                 android:layout_marginLeft="30dp"
                 android:textColor="@color/white"
                 android:fontFamily="@font/ralewaylight"
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/auEmailET"
+                android:id="@+id/auNameET"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginLeft="20dp"
                 android:ems="10"
-                android:inputType="textEmailAddress"
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/white"
+
+                />
+
+
+        </LinearLayout>
+
+        //Username
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/AddUserNsmeLayout">
+
+            <TextView
+                android:id="@+id/auUserNameTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/username"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ralewaylight"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/auUserNameET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+
+        //Number
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/numberLayout">
+
+            <TextView
+                android:id="@+id/auNumTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/number"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/ralewaylight"
+                android:textStyle="bold"
+                />
+
+            <EditText
+                android:id="@+id/auNumET"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="20dp"
+                android:ems="10"
+                android:inputType="text|number"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/white"
                 />
@@ -74,60 +138,10 @@
         </LinearLayout>
 
 
-            //Password
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:id="@+id/passwordLayout">
 
-            <TextView
-                android:id="@+id/auPwordTV"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/password"
-                android:layout_marginLeft="30dp"
-                android:textColor="@color/white"
-                android:fontFamily="@font/ralewaylight"
-                android:textStyle="bold"/>
-
-            <EditText
-                android:id="@+id/auPwordET"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginLeft="20dp"
-                android:ems="10"
-                android:inputType="textPassword"
-                android:backgroundTint="@color/white"
-                android:textColor="@color/white"
-                />
-
-
-        </LinearLayout>
-
-
-
-        //Buttons
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/regBtnsLayout"
-            android:orientation="horizontal"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="150dp">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/moredetailsBtn"
-                android:text="@string/addMore"
-                android:clickable="true"
-                android:layout_marginTop="5dp"
-                android:onClick="registerBtn2Click"/>
 
         <android.support.design.widget.FloatingActionButton
-            android:id="@+id/addUserBTN"
+            android:id="@+id/addUser2BTN"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
@@ -135,12 +149,9 @@
             android:clickable="true"
             app:srcCompat="@android:drawable/ic_menu_add"
             android:background="@color/yellow"
-            android:layout_marginStart="80dp"
-            />
-
-
-
-        </LinearLayout>
+            android:layout_marginStart="290dp"
+            android:layout_marginTop="90dp"
+            android:onClick="registerBtnClick"/>
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

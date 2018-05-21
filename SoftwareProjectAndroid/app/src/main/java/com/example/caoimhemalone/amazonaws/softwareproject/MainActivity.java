@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         uNametv = (TextView) findViewById(R.id.userTop);
         uNametv.setText(getIntent().getExtras().getString("Email"));
 
-//        AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
+        //        AWSMobileClient.getInstance().initialize(this, new AWSStartupHandler() {
 //            @Override
 //            public void onComplete(AWSStartupResult awsStartupResult) {
 //                Log.d("YourMainActivity", "AWSMobileClient is instantiated and you are connected to AWS!");

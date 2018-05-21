@@ -16,60 +16,101 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class Register extends AppCompatActivity {
-    private FloatingActionButton addBTN;
     private EditText txtEmailReg;
     private EditText txtPasswordReg;
-    private EditText txtConfirmPasswordReg;
-    private EditText txtNumberReg;
-    private EditText txtNameReg;
     private FirebaseAuth firebaseAuth;
+    private FloatingActionButton regPageBtn;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register_content);
         txtEmailReg = findViewById(R.id.auEmailET);
         txtPasswordReg = findViewById(R.id.auPwordET);
-        //txtConfirmPasswordReg = findViewById(R.id.auConPwordET);
-        txtNumberReg = findViewById(R.id.auNumET);
-        txtNameReg = findViewById(R.id.auNameET);
         firebaseAuth = FirebaseAuth.getInstance();
 
-//        addBTN = (FloatingActionButton) findViewById(R.id.addUserBTN);
-//        addBTN.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i;
-//                i = new Intent(getApplicationContext(), MainActivity.class);
-//                startActivity(i);
-//                finish();
-//            }
-//        });
+
+        regPageBtn =  findViewById(R.id.addUserBTN);
+        regPageBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final ProgressDialog progressDialog = ProgressDialog.show(Register.this, "Please wait...", "Processing...", true);
+                (firebaseAuth.createUserWithEmailAndPassword(txtEmailReg.getText().toString(), txtPasswordReg.getText().toString()))
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+                                progressDialog.dismiss();
+
+                                if (task.isSuccessful()) {
+                                    Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_LONG).show();
+                                    Intent i = new Intent(Register.this, Login2.class);
+                                    startActivity(i);
+                                } else {
+                                    Log.e("Error", task.getException().toString());
+                                    Toast.makeText(Register.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+
+                                }
+                            }
+                        });
+            }
+        });
     }
 
-    public void registerBtnClick (View v){
-        final ProgressDialog progressDialog = ProgressDialog.show(Register.this, "Please wait...", "Processing...", true );
-        (firebaseAuth.createUserWithEmailAndPassword(txtEmailReg.getText().toString(), txtPasswordReg.getText().toString()))
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
+//    public void registerBtnClick (View v){
+//        //For authentication
+//        final ProgressDialog progressDialog = ProgressDialog.show(Register.this, "Please wait...", "Processing...", true );
+//        (firebaseAuth.createUserWithEmailAndPassword(txtEmailReg.getText().toString(), txtPasswordReg.getText().toString()))
+//                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        progressDialog.dismiss();
+//
+//                        if (task.isSuccessful()) {
+//                            Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_LONG).show();
+//                            Intent i = new Intent(Register.this, Login2.class);
+//                            i.putExtra("Email", firebaseAuth.getCurrentUser().getEmail());
+//                            startActivity(i);
+//                        }
+//                        else {
+//                            Log.e("Error", task.getException().toString());
+//                            Toast.makeText(Register.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+//
+//                        }
+//                    }
+//                });
+//
+//    }
 
-                        if (task.isSuccessful()) {
-                            Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_LONG).show();
-                            Intent i = new Intent(Register.this, Login2.class);
-                            startActivity(i);
-                        }
-                        else {
-                            Log.e("Error", task.getException().toString());
-                            Toast.makeText(Register.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
-                        }
-                    }
-                });
+//    public void registerBtn2Click (View v){
+//        //For authentication add more details button
+//        final ProgressDialog progressDialog = ProgressDialog.show(Register.this, "Please wait...", "Processing...", true );
+//        (firebaseAuth.createUserWithEmailAndPassword(txtEmailReg.getText().toString(), txtPasswordReg.getText().toString()))
+//                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        progressDialog.dismiss();
+//
+//                        if (task.isSuccessful()) {
+//                            Toast.makeText(Register.this, "Registration Successful", Toast.LENGTH_LONG).show();
+//                            Intent i = new Intent(Register.this, Register2.class);
+//                            startActivity(i);
+//                        }
+//                        else {
+//                            Log.e("Error", task.getException().toString());
+//                            Toast.makeText(Register.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+//
+//                        }
+//                    }
+//                });
+//
+//    }
 
 
-    }
 }

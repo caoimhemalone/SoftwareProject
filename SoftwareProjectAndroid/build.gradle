@@ -21,6 +21,7 @@ dependencies {
     implementation 'com.amazonaws:aws-android-sdk-iot:2.6.+'
 
 
+    //implementation 'com.google.firebase:firebase-auth:11.6.0'
 }
 
 android {

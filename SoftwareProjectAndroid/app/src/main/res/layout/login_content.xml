@@ -59,7 +59,7 @@
             android:layout_marginTop="180dp">
 
             <Button
-                android:id="@+id/Login"
+                android:id="@+id/Login1"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:text="@string/login"
@@ -69,18 +69,6 @@
                 android:fontFamily="@font/ralewaylight"
                 android:textStyle="bold"
                 />
-
-            <!--<Button-->
-                <!--android:id="@+id/LoginAM"-->
-                <!--android:layout_width="150dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:text="@string/loginAM"-->
-                <!--android:layout_marginStart="120dp"-->
-                <!--android:layout_marginTop="20dp"-->
-                <!--android:textColor="@color/white"-->
-                <!--android:background="@color/amazon"-->
-                <!--android:fontFamily="@font/ralewaylight"-->
-                <!--android:textStyle="bold"/>-->
 
             <Button
                 android:id="@+id/SignUp"

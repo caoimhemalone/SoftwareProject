@@ -20,8 +20,9 @@
     <string name="login">Login</string>
     <string name="addUser">Add User</string>
     <string name="password">Password</string>
-    <string name="conPword">Confirm Password</string>
+    <string name="username">User Name</string>
     <string name="logout">Logout</string>
+    <string name="addMore">Add More Details</string>
 
     <string name="emergency">Emergency</string>
     <string name="nineoneone"> Call 911</string>
