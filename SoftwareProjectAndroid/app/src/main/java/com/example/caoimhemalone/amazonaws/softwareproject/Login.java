@@ -16,7 +16,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.login_content);
 
 
-        Log1BTN = (Button) findViewById(R.id.Login2);
+        Log1BTN = (Button) findViewById(R.id.Login1);
         Log1BTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
