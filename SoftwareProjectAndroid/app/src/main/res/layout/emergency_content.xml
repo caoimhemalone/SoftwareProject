@@ -91,7 +91,7 @@
                 android:fontFamily="@font/robotoblack"
                 android:textSize="30sp"
                 android:textAlignment="center"
-                android:id="@+id/callContacts"/>
+                android:id="@+id/alertContacts"/>
 
             <Button
                 android:layout_width="match_parent"
