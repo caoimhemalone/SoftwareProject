@@ -7,19 +7,19 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/womanDesc"
         app:srcCompat="@drawable/loginbckrndedited" />
 
 
 
-    <!--<Button-->
-        <!--android:id="@+id/homeLogBTN"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_weight="1"-->
-        <!--android:text="Home" />-->
+    <Button
+        android:id="@+id/homeLogBTN"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Home" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -51,16 +51,6 @@
             android:textAlignment="center"
             />
 
-        <TextView
-            android:id="@+id/loginTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/login"
-            android:layout_marginStart="170dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/robotoblack"
-            android:textAlignment="center"
-            />
 
 
         <LinearLayout
@@ -135,31 +125,6 @@
                 android:fontFamily="@font/ralewaylight"
                 android:textStyle="bold"
 
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/notsigned"
-                android:layout_marginStart="153dp"
-                android:textColor="@color/white"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="5dp"
-
-
-                />
-
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="@string/signup"
-                android:textColor="@color/blue"
-                android:background="@color/white"
-                android:fontFamily="@font/ralewaylight"
-                android:textStyle="bold"
-                android:id="@+id/loginPageRegBTN"
-                android:layout_marginStart="148dp"
-                android:textSize="10sp"
                 />
         </LinearLayout>
     </LinearLayout>

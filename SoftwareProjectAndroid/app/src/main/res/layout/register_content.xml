@@ -117,14 +117,14 @@
             android:layout_marginStart="50dp"
             android:layout_marginTop="150dp">
 
-            <!--<Button-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:id="@+id/moredetailsBtn"-->
-                <!--android:text="@string/addMore"-->
-                <!--android:clickable="true"-->
-                <!--android:layout_marginTop="5dp"-->
-                <!--android:onClick="registerBtn2Click"/>-->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/moredetailsBtn"
+                android:text="@string/addMore"
+                android:clickable="true"
+                android:layout_marginTop="5dp"
+                android:onClick="registerBtn2Click"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/addUserBTN"
@@ -135,7 +135,7 @@
             android:clickable="true"
             app:srcCompat="@android:drawable/ic_menu_add"
             android:background="@color/yellow"
-            android:layout_marginStart="220dp"
+            android:layout_marginStart="80dp"
             />
 
 

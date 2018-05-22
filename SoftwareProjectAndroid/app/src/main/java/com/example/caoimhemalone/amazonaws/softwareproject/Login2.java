@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Login2 extends AppCompatActivity {
-    private Button RegBTN;
+    private Button HBTN;
     private Button LogBtn;
 
     private EditText txtEmailLogin;
@@ -34,18 +34,30 @@ public class Login2 extends AppCompatActivity {
         txtPasswordLogin = (EditText) findViewById(R.id.logPwordET);
         firebaseAuth = FirebaseAuth.getInstance();
 
-        RegBTN = (Button) findViewById(R.id.loginPageRegBTN);
-        RegBTN.setOnClickListener(new View.OnClickListener() {
+
+
+
+        HBTN = (Button) findViewById(R.id.homeLogBTN);
+        HBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i;
-                i = new Intent(getApplicationContext(), Register.class);
+                i = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(i);
                 finish();
             }
         });
-
-
+//
+//        LogBTN = (Button) findViewById(R.id.Login);
+//        LogBTN.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i;
+//                i = new Intent(getApplicationContext(), MainActivity.class);
+//                startActivity(i);
+//                finish();
+//            }
+//        });
 
         LogBtn =  findViewById(R.id.Login2);
         LogBtn.setOnClickListener(new View.OnClickListener() {
@@ -76,5 +88,28 @@ public class Login2 extends AppCompatActivity {
         });
     }
 
-
+//    public void LoginBtnClick(View v){
+//        final ProgressDialog progressDialog = ProgressDialog.show(Login2.this, "Please Wait...", "Processing", true);
+//
+//        (firebaseAuth.signInWithEmailAndPassword(txtEmailLogin.getText().toString(), txtPasswordLogin.getText().toString()))
+//                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<AuthResult> task) {
+//                        progressDialog.dismiss();
+//
+//                        if (task.isSuccessful()){
+//                            Toast.makeText(Login2.this, "Login Successful", Toast.LENGTH_LONG).show();
+//                            Intent i = new Intent(Login2.this, MainActivity.class);
+//                            i.putExtra("Email", firebaseAuth.getCurrentUser().getEmail());
+//                            startActivity(i);
+//
+//                        }
+//                        else {
+//                            Log.e("Error",task.getException().toString());
+//                            Toast.makeText(Login2.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+//                        }
+//                    }
+//                });
+//
+//    }
 }
