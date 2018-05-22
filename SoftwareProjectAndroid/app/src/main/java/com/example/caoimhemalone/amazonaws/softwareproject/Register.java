@@ -35,6 +35,9 @@ public class Register extends AppCompatActivity {
         txtPasswordReg = findViewById(R.id.auPwordET);
         firebaseAuth = FirebaseAuth.getInstance();
 
+        Toast.makeText(Register.this, "BY REGISTERING YOU AGREE TO OUR TERMS AND CONDITIONS", Toast.LENGTH_LONG).show();
+
+
 
         regPageBtn =  findViewById(R.id.addUserBTN);
         regPageBtn.setOnClickListener(new View.OnClickListener() {
@@ -87,7 +90,7 @@ public class Register extends AppCompatActivity {
 //
 //    }
 
-
+//
 //    public void registerBtn2Click (View v){
 //        //For authentication add more details button
 //        final ProgressDialog progressDialog = ProgressDialog.show(Register.this, "Please wait...", "Processing...", true );
