@@ -155,18 +155,31 @@
 
 
 
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/addConBTN"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/addConBTN"-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:backgroundTint="@color/yellow"-->
+            <!--android:clickable="true"-->
+            <!--app:srcCompat="@android:drawable/ic_menu_add"-->
+            <!--android:background="@color/yellow"-->
+            <!--android:layout_marginStart="290dp"-->
+            <!--android:layout_marginTop="90dp"-->
+           <!--/>-->
+
+        <Button
+            android:id="@+id/addContBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:backgroundTint="@color/yellow"
             android:clickable="true"
-            app:srcCompat="@android:drawable/ic_menu_add"
-            android:background="@color/yellow"
-            android:layout_marginStart="290dp"
-            android:layout_marginTop="90dp"
-           />
+            android:background="@color/colorPrimary"
+            android:layout_gravity="right"
+            android:layout_marginEnd="30dp"
+            android:text="Add"
+            android:textColor="@color/white"
+            />
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

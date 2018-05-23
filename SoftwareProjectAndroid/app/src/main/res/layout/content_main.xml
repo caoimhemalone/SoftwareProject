@@ -76,34 +76,39 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Status of system"
-                tools:layout_editor_absoluteX="139dp"
-                tools:layout_editor_absoluteY="148dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginRight="40dp"
-                android:layout_marginLeft="40dp"
-                android:textAlignment="center"/>
-
             <ImageView
-                android:id="@+id/activeBTN"
-                android:layout_width="match_parent"
-                android:layout_height="282dp"
-                android:layout_marginTop="50dp"
-                app:srcCompat="@drawable/greenbtn"
-                tools:layout_editor_absoluteX="138dp"
-                tools:layout_editor_absoluteY="203dp" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/sandstrans"/>
+
+            <!--<TextView-->
+                <!--android:id="@+id/textView3"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Status of system"-->
+                <!--tools:layout_editor_absoluteX="139dp"-->
+                <!--tools:layout_editor_absoluteY="148dp"-->
+                <!--android:layout_marginTop="30dp"-->
+                <!--android:layout_marginRight="40dp"-->
+                <!--android:layout_marginLeft="40dp"-->
+                <!--android:textAlignment="center"/>-->
+
             <!--<ImageView-->
-                <!--android:id="@+id/notActiveBTN"-->
+                <!--android:id="@+id/activeBTN"-->
                 <!--android:layout_width="match_parent"-->
                 <!--android:layout_height="282dp"-->
                 <!--android:layout_marginTop="50dp"-->
-                <!--app:srcCompat="@drawable/redbtn"-->
+                <!--app:srcCompat="@drawable/greenbtn"-->
                 <!--tools:layout_editor_absoluteX="138dp"-->
                 <!--tools:layout_editor_absoluteY="203dp" />-->
+            <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/notActiveBTN"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="282dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginTop="50dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;app:srcCompat="@drawable/redbtn"&ndash;&gt;-->
+                <!--&lt;!&ndash;tools:layout_editor_absoluteX="138dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;tools:layout_editor_absoluteY="203dp" />&ndash;&gt;-->
         </LinearLayout>
 
 

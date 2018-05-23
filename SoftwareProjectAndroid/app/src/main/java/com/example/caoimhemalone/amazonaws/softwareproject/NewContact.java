@@ -17,11 +17,11 @@ public class NewContact extends AppCompatActivity {
 
 
     private Button HButton,CButton, EButton, SButton;
-    private FloatingActionButton AddContBTN;
+    private Button AddContBTN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.guidelines_content);
+        setContentView(R.layout.newcontact_content);
 
         HButton = (Button) findViewById(R.id.HomeButton);
         HButton.setOnClickListener(new View.OnClickListener() {
@@ -67,7 +67,7 @@ public class NewContact extends AppCompatActivity {
             }
         });
 
-        AddContBTN = (FloatingActionButton) findViewById(R.id.addConBTN);
+        AddContBTN = (Button) findViewById(R.id.addContBtn);
         AddContBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

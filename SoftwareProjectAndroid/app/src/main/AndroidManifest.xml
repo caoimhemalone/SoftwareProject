@@ -28,6 +28,10 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
+            android:name=".NewContact"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity
             android:name=".Livestream"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
