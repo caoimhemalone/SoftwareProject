@@ -30,6 +30,7 @@ import android.widget.TextView;
 
 public class Contacts extends AppCompatActivity {
     private Button HButton,CButton, EButton, SButton;
+    private FloatingActionButton faBTN;
 
 
     // Tab reference https://www.youtube.com/watch?v=81653A9ToIk
@@ -97,6 +98,17 @@ public class Contacts extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i;
                 i = new Intent(getApplicationContext(), Settings.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        faBTN = (FloatingActionButton) findViewById(R.id.faButton);
+        faBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i;
+                i = new Intent(getApplicationContext(), NewContact.class);
                 startActivity(i);
                 finish();
             }

@@ -24,6 +24,7 @@ public class Register extends AppCompatActivity {
     private EditText txtPasswordReg;
     private FirebaseAuth firebaseAuth;
     private FloatingActionButton regPageBtn;
+    private Button LogBTN;
 
 
 
@@ -38,6 +39,17 @@ public class Register extends AppCompatActivity {
         Toast.makeText(Register.this, "BY REGISTERING YOU AGREE TO OUR TERMS AND CONDITIONS", Toast.LENGTH_LONG).show();
 
 
+
+        LogBTN = (Button) findViewById(R.id.RegPageLogBTN);
+        LogBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i;
+                i = new Intent(getApplicationContext(), com.example.caoimhemalone.amazonaws.softwareproject.Login2.class);
+                startActivity(i);
+                finish();
+            }
+        });
 
         regPageBtn =  findViewById(R.id.addUserBTN);
         regPageBtn.setOnClickListener(new View.OnClickListener() {
